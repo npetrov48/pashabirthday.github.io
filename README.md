@@ -1,1 +1,280 @@
-# pashabirthday.github.io
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎉 С Днём Рождения, Павел!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Pacifico&display=swap');
+        
+        :root {
+            --primary: #6C5CE7;
+            --secondary: #00CEFF;
+            --accent: #FF7675;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #2d3436;
+        }
+        
+        .card {
+            width: 90%;
+            max-width: 600px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+            margin: 30px 0;
+            transform-style: preserve-3d;
+            transition: all 0.5s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+        
+        .header {
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            padding: 30px;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
+            animation: pulse 4s infinite linear;
+        }
+        
+        h1 {
+            font-family: 'Pacifico', cursive;
+            margin: 0;
+            font-size: 2.5rem;
+            position: relative;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        h2 {
+            margin: 10px 0 0;
+            font-weight: 400;
+            position: relative;
+        }
+        
+        .content {
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .message {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+        
+        .gift-box {
+            background: linear-gradient(45deg, #ffeaa7, #fab1a0);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .gift-box:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        
+        .gift-box::after {
+            content: "🎁";
+            position: absolute;
+            font-size: 80px;
+            right: -20px;
+            bottom: -20px;
+            opacity: 0.2;
+            transform: rotate(20deg);
+        }
+        
+        .promo-code {
+            font-family: monospace;
+            font-size: 1.5rem;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            display: inline-block;
+            margin: 15px 0;
+            font-weight: bold;
+            color: var(--primary);
+            border: 2px dashed var(--accent);
+            animation: wiggle 2s infinite;
+        }
+        
+        .terms {
+            font-size: 0.7rem;
+            color: #636e72;
+            text-align: left;
+            margin-top: 30px;
+            padding: 15px;
+            background: #f1f2f6;
+            border-radius: 10px;
+        }
+        
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: var(--accent);
+            opacity: 0;
+        }
+        
+        @keyframes pulse {
+            0% { transform: rotate(0deg) translate(0, 0); }
+            100% { transform: rotate(360deg) translate(0, 0); }
+        }
+        
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(-2deg); }
+            50% { transform: rotate(2deg); }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(108, 92, 231, 0.3);
+        }
+        
+        .btn:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+            box-shadow: 0 7px 15px rgba(0, 206, 255, 0.4);
+        }
+        
+        @media (max-width: 500px) {
+            h1 { font-size: 2rem; }
+            .promo-code { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="header">
+            <h1>С Днём Рождения!</h1>
+            <h2>Новокшонов Павел Евгеньевич</h2>
+        </div>
+        
+        <div class="content">
+            <div class="message">
+                Дорогой Павел!<br>
+                В этот особенный день желаю тебе вдохновения, крутых проектов<br>
+                и постоянного профессионального роста! 🚀<br>
+                Пусть каждый день приносит новые знания и достижения!
+            </div>
+            
+            <div class="gift-box float">
+                <h3>🎁 Твой подарок:</h3>
+                <p>Промокод на 1000 рублей для платформы Stepik.org</p>
+                <div class="promo-code">GIFT1000MEWSF38BC</div>
+                <a href="https://stepik.org" target="_blank" class="btn">Использовать промокод</a>
+            </div>
+            
+            <div class="terms">
+                <p><strong>Условия использования сертификата:</strong></p>
+                <ul>
+                    <li>Сертификаты могут быть использованы на платформе stepik.org для приобретения любого платного курса, оплата которого осуществляется с помощью банковской карты.</li>
+                    <li>Важно отметить, что сертификат не позволяет покрыть 100% стоимости покупки, вам потребуется внести дополнительную сумму не менее 100 рублей.</li>
+                    <li>Сертификат становится доступным для использования сразу после его приобретения.</li>
+                    <li>На сертификате отражён уникальный код, который следует ввести как Промокод в процессе оформления заказа.</li>
+                    <li>Сертификат можно использовать только в полном объёме, а остаток средств не подлежит переносам и сгорает.</li>
+                    <li>При оплате одного курса можно применить лишь один сертификат.</li>
+                    <li>Срок действия сертификата составляет один год с момента покупки.</li>
+                    <li>Сертификат не подлежит обмену на наличные средства.</li>
+                    <li>По истечении срока действия электронный подарочный сертификат будет заблокирован и не подлежит восстановлению.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Создаем конфетти
+        function createConfetti() {
+            const colors = ['#6C5CE7', '#00CEFF', '#FF7675', '#FDCB6E', '#00B894'];
+            
+            for (let i = 0; i < 50; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.top = -10 + 'px';
+                confetti.style.transform = 'rotate(' + Math.random() * 360 + 'deg)';
+                
+                document.body.appendChild(confetti);
+                
+                const animationDuration = Math.random() * 3 + 2;
+                
+                confetti.style.animation = `drop ${animationDuration}s linear forwards`;
+                confetti.style.setProperty('--end-y', Math.random() * 100 + 'vh');
+                confetti.style.setProperty('--end-x', (Math.random() - 0.5) * 100 + 'vw');
+                
+                setTimeout(() => {
+                    confetti.remove();
+                }, animationDuration * 1000);
+            }
+        }
+        
+        // Добавляем CSS для анимации конфетти
+        const style = document.createElement('style');
+        style.innerHTML = `
+            @keyframes drop {
+                0% {
+                    opacity: 1;
+                    transform: translate(0, 0) rotate(0deg);
+                }
+                100% {
+                    opacity: 0;
+                    transform: translate(var(--end-x), var(--end-y)) rotate(360deg);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Запускаем конфетти при загрузке и при клике
+        window.addEventListener('load', createConfetti);
+        document.querySelector('.card').addEventListener('click', createConfetti);
+    </script>
+</body>
+</html>
